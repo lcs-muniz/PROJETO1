@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ClienteModel extends Model
 {
@@ -34,4 +35,10 @@ class ClienteModel extends Model
     {
         return self::where('id', $id)->delete(); // Deleta o cliente com o ID especificado
     }
+    
+    public static function consultar($id){
+        $cliente = DB::table('cliente')->where('id')->first();
+        return $cliente;
+    }
+
 }
