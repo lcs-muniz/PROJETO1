@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/cadastrarCliente', [ClienteController::class, 'store']);
     Route::get('/listarCliente', [ClienteController::class, 'index'])->name('listarCliente');
     Route::delete('/deletarCliente/{id}', [ClienteController::class, 'destroy']);
+    Route::get('editarCliente/{id}', [ClienteController::class, 'edit']);
 
     // Rotas de perfil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

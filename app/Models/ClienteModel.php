@@ -41,4 +41,12 @@ class ClienteModel extends Model
         return $cliente;
     }
 
+    public static function atualizar (Request $request, $id){
+        $status = DB::table('clientes')->whre('id', $id->update)([
+            'nome' => $request->input('nome'),
+            'cpf' => $request->input('cpf'),
+            'telefone' => $request->input('telefone'),
+            'email' => $request->input('email')
+        ]);
+    }
 }
