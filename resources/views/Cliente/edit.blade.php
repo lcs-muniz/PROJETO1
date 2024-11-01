@@ -6,7 +6,8 @@
     <title>Editar</title>
 </head>
 <body>
-    <form action= "{{ url('editarCliente/' . $cliente->id }}" method="POST">
+    <form action="{{ url('editarCliente/' . $cliente->id) }}" method="POST">
+
         @csrf
         @method('PUT')
         Nome:

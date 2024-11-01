@@ -46,10 +46,10 @@ class ClienteController extends Controller
     public function update(Request $request, $id){
         $status = ClienteModel::atualizar($request, $id);
         if($status){
-            return redirect('listarCliente')-> with('mensagem', 'Cliente alterados com sucesso!');
+            return redirect('listarCliente')-> with('mensagem', 'Cliente alterado com sucesso!');
         }
         else{
-            return redirect('lisarCliente')-> with('mensagem', 'Erro ao atualizar o cliente, tente novamente');
+            return redirect('listarCliente')-> with('mensagem', 'Erro ao atualizar o cliente, tente novamente');
         }
     }
 }
