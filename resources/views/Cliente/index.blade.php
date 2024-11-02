@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -25,7 +24,7 @@
         <h1 class="mb-4 text-center">Listagem de Clientes</h1>
         <input type="text" id="filtroClientes" class="form-control mb-3" placeholder="Filtrar clientes..." onkeyup="filtrarClientes()">
 
-        <table class="table table-striped table-bordered">
+        <table id="tabelaClientes" class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Nome</th>
